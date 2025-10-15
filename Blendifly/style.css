@@ -1,0 +1,1299 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epunda+Sans:ital,wght@0,300..900;1,300..900&family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variables (Consolidated) */
+:root {
+    --dark-bg: #0d0d0d;
+    --card-dark: #1a1a1a;
+    --card-yellow: #ffc900; /* Used as --card-yellow and #fbd364 */
+    --text-white: #ffffff;
+    --text-light-gray: #b0b0b0;
+    --border-blue: #0088ff;
+    --check-color: #ffc900;
+}
+
+/* Base Body Style */
+body {
+    background-color: #000001;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    font-family: "Heebo", sans-serif;
+    background-color: #171718;
+    height: 82px;
+    width: 1152px;
+    border-radius: 65px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding-inline: 90px;
+}
+
+.nav-logo img {
+    width: 40px;
+}
+.nav-link ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+.nav-buttons .nav-btn1 {
+    background-color: #fbd364;
+    color: #171718;
+    padding: 12px 28px; 
+    border-radius: 40px; 
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    margin-inline: 30px;
+}
+.nav-buttons a {
+    font-size: 16px;
+    font-weight: 500; 
+    text-transform: uppercase;
+    color: white; 
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    color: white;
+    text-align: center;
+    padding: 100px 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.hero-section p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #b0b0b0;
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px 32px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.primary-btn {
+    background-color: #fbd364;
+    color: #171718;
+    box-shadow: 0 4px 15px rgba(251, 211, 100, 0.4);
+}
+
+.secondary-btn {
+    background-color: white;
+    color: #171718;
+    box-shadow: 0 0 0 1px #808080;
+}
+
+/* Video Section */
+.video-section {
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #000001;
+}
+
+.pre-heading {
+    font-size: 14px;
+    font-weight: 500;
+    color: #b0b0b0;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.video-section h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 50px;
+    letter-spacing: 0.5px;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    background-color: #171718;
+    padding: 8px;
+    border-radius: 40px;
+    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.903);
+}
+
+.tab-item {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.tab-item.active {
+    background-color: #fbd364;
+    color: #171718;
+}
+
+.tab-item.active img {
+    width: 30px;
+}
+.tab-item.active span {
+    font-size: 16px;
+}
+
+.video-player-frame {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 20px 40px 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    box-shadow: 
+        0 0 15px rgba(251, 211, 100, 0.3),
+        0 0 40px rgba(251, 211, 100, 0.1),
+        inset 0 0 40px rgba(245, 240, 176, 0.599); 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.video-caption {
+    font-size: 13px;
+    font-weight: 400;
+    color: #b0b0b0;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.video-placeholder {
+    width: 100%;
+    padding-top: 56.25%;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 0 0 4px white, 
+        0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: #fbd364;
+    clip-path: polygon(30% 20%, 30% 80%, 80% 50%);
+}
+
+/* Trusted Section */
+.trusted-by-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #000001;
+    color: white;
+}
+
+.trusted-by-section h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 80px;
+    letter-spacing: 0.5px;
+}
+
+.logo-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-item {
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #706e69;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+                0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.logo-item img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* Achievements Section */
+.achievements-section {
+    background-color: #000001;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.achievements-card {
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    padding: 50px 70px;
+    max-width: 1200px;
+    width: 90%;
+    text-align: center;
+    color: #333333;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.2), 
+        0 0 40px rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.intro-text {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    line-height: 1.4;
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.stat-item .value {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.stat-item .label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555555;
+    line-height: 1.3;
+}
+
+/* AI Fashion Hero Section (Products) */
+.ai-fashion-hero {
+    background-color: #000001;
+    padding: 100px 20px 150px 20px;
+    text-align: center;
+    color: white;
+}
+
+.pre-heading-small {
+    font-size: 18px;
+    font-weight: 500;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.ai-fashion-hero h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ai-fashion-hero .description {
+    font-size: 20px;
+    font-weight: 400;
+    color: #e0e0e0;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Flow Diagram */
+.flow-diagram {
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fd-2 {
+    margin-top: 100px;
+}
+
+/* Container */
+.future {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pricing Section */
+.pricing-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Set display properties to center the pricing block if it's the only thing on the page */
+    margin: 100px auto; 
+}
+
+.pricing-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.pricing-header p {
+    color: var(--text-light-gray);
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.toggle-switch {
+    display: inline-flex;
+    background-color: var(--card-dark);
+    border-radius: 50px;
+    padding: 4px;
+    margin-bottom: 40px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    color: var(--text-white);
+}
+
+.toggle-btn.active {
+    background-color: var(--card-yellow);
+    color: var(--dark-bg);
+}
+
+.toggle-btn.yearly {
+    color: var(--text-white);
+}
+.toggle-btn.yearly:not(.active) {
+    background-color: transparent;
+}
+
+.plans-wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.plan-card {
+    flex: 1;
+    max-width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan-card h2 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.plan-card .price {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.free-plan {
+    background: linear-gradient(145deg, var(--card-dark), #000);
+    border: 1px solid var(--card-dark);
+    color: var(--text-white);
+}
+.free-plan .price {
+    color: var(--card-yellow);
+}
+
+.pro-plan {
+    background-color: var(--card-yellow);
+    border: 1px solid var(--card-yellow);
+    color: var(--dark-bg);
+}
+.pro-plan h2, .pro-plan .price, .pro-plan .features li span {
+    color: var(--dark-bg);
+}
+.pro-plan .yes {
+    color: var(--dark-bg) !important;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: auto;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.features li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1em;
+}
+
+.features li span:first-child::before {
+    content: '✓';
+    color: var(--check-color);
+    margin-right: 10px;
+    font-weight: bold;
+}
+.pro-plan .features li span:first-child::before {
+    color: var(--dark-bg);
+}
+
+.features .yes {
+    font-weight: bold;
+    color: var(--text-white);
+}
+.pro-plan .features li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.get-started-btn {
+    display: block;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.free-plan .get-started-btn {
+    background-color: var(--card-yellow);
+    color: var(--dark-bg);
+}
+.free-plan .get-started-btn:hover {
+    background-color: #ffd74d;
+}
+
+.pro-plan .get-started-btn {
+    background-color: var(--dark-bg);
+    color: var(--card-yellow);
+}
+.pro-plan .get-started-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .plans-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .plan-card {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+
+/* slider */
+.slider{
+    text-align: center;
+}
+.slider h3{
+    font-size: 50px;
+    font-weight: 700;
+}
+.slider p{
+    font-size: 35px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+/* Import a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    /* Colors derived from the image */
+    --bg-color: #000000; /* Pure black background */
+    --card-bg: #111111; /* Very dark card background */
+    --accent-color: #ffc93c; /* Exact bright yellow for quotes/active elements */
+    --text-primary: #ffffff; /* White for names/quotes */
+    --text-secondary: #aaaaaa; /* Light gray for titles */
+    --card-border-radius: 10px;
+}
+
+/* ------------------------------------------- */
+/* 1. SECTION SCOPING (Key Change for a Section) */
+/* ------------------------------------------- */
+.testimonial-section-container {
+    /* Assign the required dark background and font here */
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif; 
+    color: var(--text-primary);
+    
+    /* Padding for the section component */
+    padding: 60px 0; 
+    width: 100%;
+}
+
+/* Reset default body background, assuming it's managed by your main site CSS */
+/* If your main site is light, you might need to adjust the body background here */
+body {
+    margin: 0;
+}
+
+/* ------------------------------------------- */
+/* 2. SLIDER LAYOUT AND COMPONENT STYLING */
+/* ------------------------------------------- */
+
+.testimonial-slider-container {
+    max-width: 900px; /* Aligns content in the center */
+    width: 90%;
+    margin: 0 auto; /* Center the container within the section */
+    position: relative;
+    padding: 0 50px; /* Space for the navigation arrows */
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 20px; 
+    justify-content: center;
+}
+
+/* --- Testimonial Card Styling --- */
+.testimonial-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--card-border-radius);
+    flex: 1 1 48%; 
+    position: relative;
+    color: var(--text-secondary);
+    box-shadow: 0 0 15px rgba(255, 201, 60, 0.05),
+                0 4px 10px rgba(0, 0, 0, 0.5); 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+}
+
+/* --- Quote Icon Styling ('❝') --- */
+.quote-icon {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background-color: var(--accent-color);
+    color: var(--card-bg); 
+    width: 45px; 
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    line-height: 1;
+    font-family: Georgia, serif; 
+    font-weight: bold;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.testimonial-card p {
+    font-size: 1em; 
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--text-primary); 
+}
+
+/* --- Client Info Styling --- */
+.client-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.client-avatar {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    box-shadow: 0 0 5px rgba(255, 201, 60, 0.2); 
+}
+
+.client-name {
+    font-weight: 600; 
+    font-size: 0.95em;
+    color: var(--text-primary);
+}
+
+.client-title {
+    font-size: 0.85em; 
+    color: var(--text-secondary);
+}
+
+/* --- Navigation Arrow Styling --- */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--text-primary); 
+    color: #111111; 
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
+    z-index: 10;
+}
+
+.left-arrow { left: 0; }
+.right-arrow { right: 0; }
+
+/* --- Pagination Dots Styling --- */
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px; 
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--text-secondary);
+    opacity: 0.5;
+}
+
+/* Active dots matching the image */
+.dot:nth-child(1), .dot:nth-child(2) {
+    background-color: var(--accent-color);
+    opacity: 1;
+    width: 20px; 
+    border-radius: 5px; 
+}
+
+/* start free */
+/* General body/container styling for the dark background */
+.dark-container {
+    background-color: #000000; /* Pure black background */
+    min-height: 400px; /* Example height for visibility */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif; /* A clear, modern font */
+    padding: 20px;
+}
+
+/* --- Start Free Button Styling --- */
+
+.free-button {
+    /* Basic Button Look */
+    color: #ffffff;
+    font-size: 1.5em; /* Larger font size */
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px; /* Oval shape for the button */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle white text glow */
+
+    /* The 'Glossy' / 'Pressed' Effect - KEPT SIMILAR FOR DEPTH */
+    background: linear-gradient(180deg, rgba(50, 50, 50, 1) 0%, rgba(20, 20, 20, 1) 100%);
+    box-shadow:
+        /* Outer dark shadow for depth */
+        0 8px 15px rgba(0, 0, 0, 0.7),
+        /* Inner white/light shadow for the 'pressed'/highlight effect */
+        inset 0 1px 3px rgba(255, 255, 255, 0.3),
+        /* A subtle highlight on top */
+        0 -1px 1px rgba(255, 255, 255, 0.1);
+
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 30px; /* Space between button and text */
+
+    /* --- ADDED: Inset-like white reflection --- */
+    position: relative; /* Needed for pseudo-element positioning */
+    overflow: hidden; /* Ensures pseudo-element stays within bounds */
+}
+
+.free-button::before {
+    content: '';
+    position: absolute;
+    top: 5px; /* Adjust vertical position */
+    left: 10%; /* Start from the left */
+    width: 80%; /* Width of the highlight */
+    height: 30%; /* Height of the highlight */
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%, /* White highlight in the middle */
+        rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: 15px / 8px; /* Elliptical border-radius for a curved highlight */
+    opacity: 0.8; /* Adjust opacity as needed */
+    pointer-events: none; /* Allows clicks to pass through */
+    filter: blur(2px); /* Soften the edges of the highlight */
+    transform: perspective(100px) rotateX(20deg); /* Tilt it slightly for a more realistic reflection */
+}
+
+
+/* Hover/Active states to make it interactive */
+.free-button:hover {
+    transform: translateY(-2px); /* Lift slightly on hover */
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.8),
+        inset 0 1px 3px rgba(255, 255, 255, 0.4),
+        0 -1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.free-button:active {
+    transform: translateY(1px); /* Push down on click */
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.6),
+        inset 0 1px 3px rgba(0, 0, 0, 0.4); /* Less inner highlight */
+}
+
+
+/* --- Upgrade Anytime Text Styling --- */
+
+.upgrade-text {
+    font-size: 2.2em; /* Large font size */
+    font-weight: bold;
+    text-transform: capitalize; /* Matches the capitalization in the image */
+
+    /* --- MODIFIED: Linear gradient for text color --- */
+    background: linear-gradient(to right, #ffd700, #ffffff); /* Yellow to White */
+    -webkit-background-clip: text; /* Clip background to text shape */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
+
+
+    /* The Glowing Effect - KEPT FOR CONSISTENCY */
+    text-shadow:
+        /* Soft, widespread glow, now based on the original yellow */
+        0 0 5px rgba(255, 215, 0, 0.6),
+        0 0 15px rgba(255, 215, 0, 0.4),
+        /* Sharper, brighter core glow */
+        0 0 25px rgba(255, 215, 0, 0.2);
+}
+
+/* faq */
+/* --- Global & Background Styling --- */
+
+.faq-section {
+    /* Set the overall dark background */
+    background-color: #101010; 
+    background-image: radial-gradient(circle at center, #202020 0%, #000000 100%); /* Subtle radial gradient for depth */
+    font-family: Arial, sans-serif;
+    padding: 50px 20px;
+    min-height: 70vh;
+    box-sizing: border-box;
+}
+
+/* --- Title Styling (The Glow) --- */
+
+.faq-title {
+    color: #ffd700; /* Gold/Yellow color */
+    font-size: 2.5em;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    /* Neon Glow Effect */
+    text-shadow: 
+        0 0 5px rgba(255, 215, 0, 0.5),
+        0 0 15px rgba(255, 215, 0, 0.3),
+        0 0 25px rgba(255, 215, 0, 0.1);
+}
+
+/* --- FAQ List and Item Styling --- */
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 0; /* Padding is handled by the inner elements */
+    border-radius: 15px;
+    /* Only the expanded item has a background */
+    background: transparent; 
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: #ffd700; /* Subtle hover color on the question text */
+}
+
+.faq-question p {
+    margin: 0;
+    flex-grow: 1; /* Allows the text to take up available space */
+}
+
+.bullet {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+/* --- Expanded/Active Item Styling --- */
+
+.faq-item.expanded {
+    background-color: #1a1a1a; /* Darker background for the expanded card */
+    /* Soft white shadow for the card effect */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); 
+    border-radius: 25px; /* Larger radius for the card in the image */
+}
+
+/* Add this to your existing CSS file */
+
+/* Initially hide all answers */
+.faq-answer {
+    /* To allow JavaScript to show/hide it easily */
+    display: none; 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+/* Style for the answer when the parent .faq-item is expanded */
+.faq-item.expanded .faq-answer {
+    display: block; /* Show the block */
+    max-height: 500px; /* Needs to be larger than the content height */
+}
+
+/* --- Arrow Button Styling --- */
+
+.arrow-btn {
+    width: 30px;
+    height: 30px;
+    background: #000000; /* Black background for the button circle */
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    margin-left: 15px;
+
+    /* Gold/Yellow Ring Glow for collapsed/hover state */
+    box-shadow: 
+        0 0 5px rgba(255, 215, 0, 0.8),
+        0 0 10px rgba(255, 215, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.arrow-btn:hover {
+    box-shadow: 
+        0 0 8px rgba(255, 215, 0, 1),
+        0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+/* Arrow icon (Using a border trick) */
+.arrow-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #ffd700; /* Yellow arrow */
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(-45deg); /* Points right */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Expanded Arrow Styling */
+.arrow-btn.expanded {
+    background: #444444; /* Darker background for the expanded arrow */
+    box-shadow: none; /* Remove the glow */
+}
+
+.arrow-btn.expanded::after {
+    border-color: #ffffff; /* White arrow when expanded */
+    transform: translate(-50%, -50%) rotate(45deg); /* Points up */
+}
+
+/* photography */
+/* --- CTA Section Styling --- */
+.cta-section {
+    background-color: #000000; /* Pure black background */
+    color: #ffffff; /* White text by default */
+    text-align: center; /* Center all text and inline elements */
+    padding: 100px 20px; /* Ample vertical padding, some horizontal */
+    font-family: Arial, sans-serif; /* A clear, modern font */
+}
+
+/* Pre-heading text */
+.cta-preheading {
+    font-size: 1.1em; /* Slightly larger than default paragraph */
+    font-weight: 400;
+    color: #b0b0b0; /* Light gray color */
+    margin-bottom: 20px; /* Space below pre-heading */
+    max-width: 800px; /* Constrain width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* Main heading text */
+.cta-heading {
+    font-size: 2.8em; /* Large, bold font */
+    font-weight: 800;
+    line-height: 1.2; /* Tight line spacing */
+    margin-bottom: 50px; /* Space below heading */
+    max-width: 900px; /* Constrain width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: -0.5px; /* Slightly tighter letter spacing */
+}
+
+/* Call to action button */
+.cta-button {
+    background-color: #ffc900; /* Bright yellow color */
+    color: #1a1a1a; /* Dark text for contrast */
+    font-size: 1.2em; /* Good size for a CTA button */
+    font-weight: bold;
+    padding: 18px 40px; /* Generous padding */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Indicate clickable */
+    text-transform: uppercase; /* Uppercase text */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 8px 20px rgba(255, 201, 0, 0.4); /* Soft glow/shadow */
+}
+
+.cta-button:hover {
+    background-color: #ffd74d; /* Slightly lighter yellow on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 10px 25px rgba(255, 201, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.cta-button:active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 4px 10px rgba(255, 201, 0, 0.3); /* Reduced shadow on active */
+}
+
+/* --- Responsive Adjustments (Optional but Recommended) --- */
+@media (max-width: 768px) {
+    .cta-heading {
+        font-size: 2em; /* Smaller font on smaller screens */
+        margin-bottom: 40px;
+    }
+
+    .cta-preheading {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 15px 30px;
+    }
+}
+
+/* --- Variables --- */
+:root {
+    --footer-bg: #000000;
+    --text-color: #ffffff;
+    --secondary-text: #b0b0b0;
+    --accent-color: #ffc900; /* Gold/Yellow */
+    --social-bg: #1a1a1a;
+    --social-size: 30px;
+}
+
+/* --- Main Footer Container --- */
+.main-footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    padding: 60px 5% 20px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Top Content Layout (Flexbox) --- */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    gap: 40px;
+}
+
+/* --- Brand Info (Left Side) --- */
+.footer-brand-info {
+    flex: 1;
+    max-width: 350px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.brand-logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.brand-description {
+    font-size: 0.9em;
+    color: var(--secondary-text);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* --- Social Icons --- */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--social-size);
+    height: var(--social-size);
+    border-radius: 50%;
+    background-color: var(--social-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--accent-color);
+    color: var(--social-bg);
+}
+
+/* For a realistic icon appearance without a library, you'd use background images or SVGs. 
+   Here, we'll use simple text/emoji as a placeholder. */
+.facebook::after { content: 'f'; font-weight: bold; }
+.twitter::after { content: 't'; font-weight: bold; }
+.instagram::after { content: 'i'; font-weight: bold; }
+.linkedin::after { content: 'in'; font-weight: bold; font-size: 0.8em; }
+
+/* --- Navigation Links (Right Side) --- */
+.footer-links-group {
+    display: flex;
+    flex: 2; /* Takes up more space */
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.column-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: var(--secondary-text);
+    font-size: 0.95em;
+    transition: color 0.2s;
+}
+
+.footer-column a:hover {
+    color: var(--text-color);
+}
+
+.footer-column a.highlight {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* --- Divider --- */
+.footer-divider {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    border: none;
+    border-top: 1px solid var(--social-bg); /* Dark gray line */
+}
+
+/* --- Mission Statement (Middle Text) --- */
+.footer-mission-statement {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    font-size: 0.85em;
+    color: var(--secondary-text);
+    padding-bottom: 30px; /* Space above copyright */
+    border-bottom: 1px solid var(--social-bg); /* Dark gray line */
+}
+
+/* --- Copyright Bar (Bottom) --- */
+.footer-copyright {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start; /* Aligns left */
+    gap: 20px;
+    font-size: 0.8em;
+    color: var(--secondary-text);
+}
+
+.footer-copyright a {
+    color: var(--secondary-text);
+    text-decoration: none;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-brand-info {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .brand-logo {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-links-group {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .footer-copyright {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+}
